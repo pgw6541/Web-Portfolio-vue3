@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './Home'
+import Products from './Products'
+import About from './About'
 
 export default createRouter({
   // Hash모드, History모드로 사용 가능
@@ -13,14 +15,14 @@ export default createRouter({
       path: '/',
       component: Home,
     },
-    // {
-    //   path: '',
-    //   component: ''
-    // },
-    // {
-    //   path: '',
-    //   component: ''
-    // },
+    {
+      path: '/products',
+      component: Products
+    },
+    {
+      path: '/about',
+      component: About
+    },
   ]
 })
 

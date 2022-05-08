@@ -1,3 +1,3 @@
 <template>
-  <h1>홈!</h1>
+  <h1>Footer!!</h1>
 </template>
