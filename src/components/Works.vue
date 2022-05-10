@@ -26,13 +26,13 @@ export default {
         {
           name: 'OMDbApi 영화 검색 사이트',
           href: 'https://movie-search-app-vue3.netlify.app',
-          image: 'src/assets/omdb.png',
+          image: 'https://raw.githubusercontent.com/pgw6541/image_source/master/Web-Portfolio/omdb.png',
           info: ''
         },
         {
           name: '2017 Starbucks',
           href: 'https://starbucks-gunw.netlify.app',
-          image: 'src/assets/starbucks.png',
+          image: 'https://github.com/pgw6541/image_source/blob/master/Web-Portfolio/starbucks.png',
           info: ''
         }
       ]
