@@ -17,6 +17,7 @@ export default {
 <style lang="scss" scoped>
 footer{
   text-align: center;
+  box-sizing: border-box;
   a {
     color: $black;
     font-size: 11px;

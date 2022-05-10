@@ -47,12 +47,12 @@ header {
   background-color: $personal;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
   .nav {
     width: 300px;
     margin: 10px 0 10px 0;
     font-size: 18px;
     font-weight: bold;
-    box-sizing: border-box;
     .nav-item {
       width: 33.3333333%;
       .nav-link {

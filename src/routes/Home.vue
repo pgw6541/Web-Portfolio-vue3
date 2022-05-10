@@ -19,7 +19,7 @@ export default {
 <style lang="scss" scoped>
 .section {
   width: 100vw;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 84px);
   position: relative;
   .image {
     position: absolute;
@@ -29,8 +29,8 @@ export default {
     img {
       width: 300px;
       height: 300px;
-      border: 3px solid $black;
-      border-radius: 50%;
+      // border: 3px solid $black;
+      // border-radius: 50%;
     }
   }
 }
