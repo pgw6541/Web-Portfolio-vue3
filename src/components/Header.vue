@@ -1,17 +1,18 @@
 <template>
   <header>
-    <ul class="nav nav-pills">
-      <li
+    <div class="nav nav-pills">
+      <div
         v-for="nav in navigations"
         :key="nav.name"
         class="nav-item">
         <RouterLink
           :to="nav.href"
+          active-class="active"
           class="nav-link">
           {{ nav.name }}
         </RouterLink>
-      </li>
-    </ul>
+      </div>
+    </div>
   </header>
 </template>
 
@@ -42,16 +43,27 @@ export default ({
 
 
 <style lang="scss" scoped>
-  header {
+header {
+  background-color: $personal;
+  display: flex;
+  justify-content: center;
+  .nav {
+    width: 300px;
+    margin: 10px 0 10px 0;
     font-size: 18px;
     font-weight: bold;
-    // font-family: "Oswald", sans-serif;
-    .nav {
-      .nav-item {
-        .nav-link {
-
+    box-sizing: border-box;
+    .nav-item {
+      width: 33.3333333%;
+      .nav-link {
+        color: #fff;
+        text-align: center;
+        transition: .3s;
+        &:hover {
+          color: $gray-500;
         }
       }
     }
   }
+}
 </style>
