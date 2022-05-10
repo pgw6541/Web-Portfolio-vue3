@@ -24,15 +24,15 @@ export default ({
     return {
       navigations: [
         {
-          name: '홈',
+          name: 'Home',
           href: '/'
         },
         {
-          name: '작업물',
+          name: 'Products',
           href: '/products'
         },
         {
-          name: '소개',
+          name: 'About',
           href: '/about'
         }
       ]
@@ -44,23 +44,31 @@ export default ({
 
 <style lang="scss" scoped>
 header {
-  background-color: $personal;
+  // background-color: $personal;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  border-bottom: 3px solid $black;
+  z-index: 99;
   .nav {
-    width: 300px;
     margin: 10px 0 10px 0;
-    font-size: 18px;
-    font-weight: bold;
     .nav-item {
-      width: 33.3333333%;
+      width: 100px;
+      margin-left: 20px;
+      &:first-child {
+        margin-left: 0;
+      }
       .nav-link {
-        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        color: $black;
         text-align: center;
         transition: .3s;
+        &.active {
+          color: $white;
+        }
         &:hover {
-          color: $gray-500;
+          color: $gray-400;
         }
       }
     }

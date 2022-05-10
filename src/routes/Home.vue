@@ -22,6 +22,13 @@ export default {
   height: calc(100vh - 84px);
   position: relative;
   .image {
+    
+    // 드래그(drag) 방지
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
     position: absolute;
     top: 50%;
     left: 50%;
