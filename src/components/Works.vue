@@ -32,7 +32,7 @@ export default {
         {
           name: '2017 Starbucks',
           href: 'https://starbucks-gunw.netlify.app',
-          image: 'https://github.com/pgw6541/image_source/blob/master/Web-Portfolio/starbucks.png',
+          image: 'https://raw.githubusercontent.com/pgw6541/image_source/master/Web-Portfolio/starbucks.png',
           info: ''
         }
       ]
