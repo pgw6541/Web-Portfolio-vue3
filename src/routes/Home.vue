@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="container">
     <div class="image">
       <img
         class="logo"
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.section {
+.container {
   width: 100vw;
   height: calc(100vh - 84px);
   position: relative;
