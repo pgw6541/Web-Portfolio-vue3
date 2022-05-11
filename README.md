@@ -7,7 +7,7 @@
 <br/>
 <br/>
 
-<!-- # Netlify -->
+# Netlify
 
-<!-- <a href="javascript:void(0)" style="text-decoration:none;">Netlify 바로가기</a> -->
+<a href="https://web-portfolio-gunw.netlify.app)" style="text-decoration:none;">https://web-portfolio-gunw.netlify.app</a>
 
