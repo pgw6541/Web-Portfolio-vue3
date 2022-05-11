@@ -1,8 +1,6 @@
 <template>
-  <div class="container">
-    <div class="products">
-      <Works />
-    </div>
+  <div class="products">
+    <Works />
   </div>
 </template>
 
@@ -14,11 +12,10 @@ export default {
     Works
   }
 }
-    console.log('name')
 </script>
 
 <style lang="scss" scoped>
-  .container {
-    background-color: $gray-200;
+  .products {
+    margin-bottom: 100px;
   }
 </style>

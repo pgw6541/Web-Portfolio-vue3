@@ -19,7 +19,7 @@ export default {
 <style lang="scss" scoped>
 .container {
   width: 100vw;
-  height: calc(100vh - 84px);
+  height: calc(100vh - 90px);
   position: relative;
   .image {
     

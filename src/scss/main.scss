@@ -3,6 +3,17 @@ $primary: darkslateblue;
 $personal: #171626;
 $inner: 1180px;
 
+$container-max-widths: (
+  sm: 540px,
+  md: 704px,
+  lg: 924px,
+  xl: 1140px,
+  xxl: 1364px
+);
+
+//Works img
+$imgSize: 350px;
+
 // bootstrap 
 @import "../../node_modules/bootstrap/scss/functions";
 

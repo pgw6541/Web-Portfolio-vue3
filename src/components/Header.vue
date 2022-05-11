@@ -60,7 +60,7 @@ header {
       }
       .nav-link {
         font-size: 18px;
-        font-weight: bold;
+        font-weight: 500;
         color: $black;
         text-align: center;
         transition: .3s;
