@@ -18,6 +18,7 @@ export default {
 footer{
   text-align: center;
   box-sizing: border-box;
+  padding: 20px 0 20px;
   a {
     color: $black;
     font-size: 11px;
