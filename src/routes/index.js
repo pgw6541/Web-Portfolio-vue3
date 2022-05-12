@@ -2,6 +2,10 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './Home'
 import Products from './Products'
 import About from './About'
+import Hobby from './Hobby'
+import Hobbygame from './Hobbygame'
+import Hobbymovie from './Hobbymovie'
+import Career from './Career'
 
 export default createRouter({
   // Hash모드, History모드로 사용 가능
@@ -21,7 +25,29 @@ export default createRouter({
     },
     {
       path: '/about',
-      component: About
+      component: About,
+      children: [
+        {
+          // 취미
+          path: 'Hobby',
+          component: Hobby,
+          children:[
+            {
+              path: 'game',
+              component: Hobbygame
+            },
+            {
+              path: 'movie',
+              component: Hobbymovie
+            }
+          ]
+        },
+        {
+          // 경력
+          path: 'career',
+          component: Career
+        }
+      ]
     },
   ]
 })

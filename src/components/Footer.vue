@@ -3,14 +3,18 @@
     <a 
       href="https://github.com/pgw6541"
       target="_blank">
-      &copy; {{ new Date().getFullYear() }} GUNW
+      &copy; {{ new Date().getFullYear() }} {{ nickname }}
     </a>
   </footer>
 </template>
 
 <script>
 export default {
-  
+  computed: {
+    nickname() {
+      return this.$store.state.about.nickname
+    }
+  }
 }
 </script>
 

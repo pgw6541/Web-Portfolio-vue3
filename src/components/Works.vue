@@ -39,7 +39,7 @@ export default {
           image: 'https://raw.githubusercontent.com/pgw6541/image_source/master/Web-Portfolio/omdb.png',
         },
         {
-          name: '2017 Starbucks',
+          name: '2017 Starbucks Home',
           href: 'https://starbucks-gunw.netlify.app',
           image: 'https://raw.githubusercontent.com/pgw6541/image_source/master/Web-Portfolio/starbucks.png',
         },
@@ -51,8 +51,6 @@ export default {
 
 <style lang="scss" scoped>
   .container {
-    background-color: $gray-100;
-
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

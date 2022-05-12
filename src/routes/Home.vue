@@ -1,9 +1,9 @@
 <template>
-  <div class="container">
+  <div class="section container">
     <div class="image">
       <img
         class="logo"
-        src="~/assets/logo.png"
+        :src="image"
         alt="" />
     </div>
     <div class="text"></div>
@@ -12,7 +12,11 @@
 
 <script>
 export default {
-  
+  computed: {
+    image() {
+      return this.$store.state.about.image
+    }
+  }
 }
 </script>
 

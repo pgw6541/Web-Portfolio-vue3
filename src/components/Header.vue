@@ -58,12 +58,12 @@ export default ({
 
 <style lang="scss" scoped>
 header {
-  // background-color: $personal;
+  background-color: $white;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   border-bottom: 3px solid $black;
-  z-index: 99;
+  z-index: 9;
   .logo {
     margin: 7px 0 0 20px;
     img {
