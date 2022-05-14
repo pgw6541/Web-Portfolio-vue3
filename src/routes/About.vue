@@ -13,14 +13,21 @@
       <div class="email"></div>
     </div>
     <div class="article2">
+      <div class="aboutNav">
+        <Aboutnav />
+      </div>
       <RouterView />
     </div>
   </div> <!--container-->
 </template>
 <script>
 import { mapState } from 'vuex'
+import Aboutnav from '~/components/Aboutnav'
 
 export default {
+  components: {
+    Aboutnav
+  },
   computed: {
     ...mapState('about' [
       'name',

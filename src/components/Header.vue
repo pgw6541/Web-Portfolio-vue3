@@ -31,9 +31,7 @@
 </template>
 
 <script>
-
-
-export default ({
+export default {
   data() {
     return {
       navigations: [
@@ -52,7 +50,7 @@ export default ({
       ]
     }
   }
-})
+}
 </script>
 
 

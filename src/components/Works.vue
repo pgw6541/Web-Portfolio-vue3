@@ -18,7 +18,7 @@
     <!-- Skeleton -->
     <div
       class="skeletons"
-      v-for="sk in 4"
+      v-for="sk in 6-works.length"
       :key="sk">
       <div class="skeleton image">
         <div class="skeleton title"></div>
@@ -80,7 +80,7 @@ export default {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      margin: 50px 20px 0px 20px;
+      margin: 50px 20px 50px 20px;
       .image {
         width: $imgSize * 16/9;
         height: $imgSize;

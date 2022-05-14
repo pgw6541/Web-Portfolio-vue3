@@ -29,7 +29,7 @@ export default createRouter({
       children: [
         {
           // 취미
-          path: 'Hobby',
+          path: 'hobby',
           component: Hobby,
           children:[
             {
