@@ -25,7 +25,7 @@ export default createRouter({
       // 취미
       path: '/interests',
       component: Interests,
-      children:[
+      children: [
         {
           path: 'game',
           component: Interest_game
