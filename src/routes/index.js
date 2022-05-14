@@ -1,10 +1,9 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Products from './Products'
 import About from './About'
-import Hobby from './Hobby'
-import Hobbygame from './Hobbygame'
-import Hobbymovie from './Hobbymovie'
-import Career from './Career'
+import Interests from './Interests'
+import Interest_game from './Interest_game'
+import Interest_movie from './Interest_movie'
 
 export default createRouter({
   // Hash모드, History모드로 사용 가능
@@ -17,33 +16,26 @@ export default createRouter({
       // '/' = path는 해당 URL 뒤쫏에 붙음 따라서 /공백 은 메인페지이로 이동 ex) https://google.com/
       path: '/',
       component: About,
-      children: [
-        {
-          // 취미
-          path: 'hobby',
-          component: Hobby,
-          children:[
-            {
-              path: 'game',
-              component: Hobbygame
-            },
-            {
-              path: 'movie',
-              component: Hobbymovie
-            }
-          ]
-        },
-        {
-          // 경력
-          path: 'career',
-          component: Career
-        }
-      ]
     },
     {
       path: '/products',
       component: Products,
     },
+    {
+      // 취미
+      path: '/interests',
+      component: Interests,
+      children:[
+        {
+          path: 'game',
+          component: Interest_game
+        },
+        {
+          path: 'movie',
+          component: Interest_movie
+        }
+      ]
+    }
   ]
 })
 

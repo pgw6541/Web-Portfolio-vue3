@@ -43,6 +43,10 @@ export default {
           name: 'Products',
           href: '/products'
         },
+        {
+          name: 'Interests',
+          href: '/interests'
+        },
       ]
     }
   }
@@ -52,21 +56,22 @@ export default {
 
 <style lang="scss" scoped>
 header {
+  height: 70px;
   background-color: $black;
+  border-bottom: 2px solid $primary;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  box-sizing: border-box;
-  border-bottom: 3px solid $white;
+  align-items: center;
+
   z-index: 9;
   .logo {
-    margin: 7px 0 0 20px;
+    margin-left: 20px;
     img {
       width: 46px;
-      height: 46px;
     }
   }
   .nav {
-    margin: 10px 0 10px 0;
     .nav-item {
       width: 100px;
       margin-left: 20px;
@@ -91,9 +96,8 @@ header {
   .gitHubLogo {
     a {
       img {
-        margin: 10px 20px 0 0;
         width: 36px;
-        height: 36px;
+        margin-right: 20px;
         filter: invert(100%);
       }
     }

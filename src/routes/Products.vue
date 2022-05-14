@@ -1,5 +1,5 @@
 <template>
-  <div class="products">
+  <div class="section">
     <Works />
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .products {
-    margin-bottom: 100px;
+  .section {
+    padding-bottom: 100px;
   }
 </style>

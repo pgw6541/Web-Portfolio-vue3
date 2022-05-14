@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="section">
     <a 
       href="https://github.com/pgw6541"
       target="_blank">

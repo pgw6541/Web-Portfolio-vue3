@@ -1,5 +1,5 @@
 <template>
-  <div class="box container">
+  <div class="container">
     <!-- Work -->
     <a
       class="workBox"
@@ -20,9 +20,7 @@
       class="skeletons"
       v-for="sk in 6-works.length"
       :key="sk">
-      <div class="skeleton image">
-        <div class="skeleton title"></div>
-      </div>
+      <div class="skeleton image"></div>
     </div>
   </div>
 </template>
@@ -62,15 +60,15 @@ export default {
         height: $imgSize;
 
         border: 2px solid $gray-200;
-        border-radius: 3%;
+        border-radius: 10px;
       }
       .textBox {
         text-align: center;
         h1 {
-          color: $black;
+          color: $gray-500;
           font-size: 15px;
           font-weight: 700;
-          margin-top: 10px;
+          margin-top: 15px;
           box-sizing: border-box;
         }
       }
@@ -84,19 +82,8 @@ export default {
       .image {
         width: $imgSize * 16/9;
         height: $imgSize;
-        background-color: $gray-200;
-        border-radius: 3%;
-        position: relative;
-        .title {
-            width: 200px;
-            height: 24px;
-            background-color: $gray-200;
-            justify-content: center;
-            position: absolute;
-            left: 50%;
-            bottom: -34px;
-            transform: translateX(-50%)
-          }
+        background-color: $gray-900;
+        border-radius: 10px;
       }
     }
   }

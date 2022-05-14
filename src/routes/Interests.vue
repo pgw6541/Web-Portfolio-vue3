@@ -1,0 +1,17 @@
+<template>
+  <div class="section interests">
+    <div class="container">
+      <h4>관심사!</h4>
+    </div>
+    <RouterView />
+  </div>
+</template>
+
+<style lang="scss" scoped>
+  .container {
+    h4 {
+      color: $white;
+    }
+    height: 100vh;
+  }
+</style>
