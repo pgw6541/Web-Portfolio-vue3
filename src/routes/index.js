@@ -1,5 +1,4 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from './Home'
 import Products from './Products'
 import About from './About'
 import Hobby from './Hobby'
@@ -17,14 +16,6 @@ export default createRouter({
     {
       // '/' = path는 해당 URL 뒤쫏에 붙음 따라서 /공백 은 메인페지이로 이동 ex) https://google.com/
       path: '/',
-      component: Home,
-    },
-    {
-      path: '/products',
-      component: Products
-    },
-    {
-      path: '/about',
       component: About,
       children: [
         {
@@ -48,6 +39,10 @@ export default createRouter({
           component: Career
         }
       ]
+    },
+    {
+      path: '/products',
+      component: Products,
     },
   ]
 })

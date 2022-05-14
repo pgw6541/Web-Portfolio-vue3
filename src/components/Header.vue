@@ -36,16 +36,12 @@ export default {
     return {
       navigations: [
         {
-          name: 'Home',
+          name: 'About',
           href: '/'
         },
         {
           name: 'Products',
           href: '/products'
-        },
-        {
-          name: 'About',
-          href: '/about'
         },
       ]
     }
@@ -56,11 +52,11 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  background-color: $white;
+  background-color: $black;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  border-bottom: 3px solid $black;
+  border-bottom: 3px solid $white;
   z-index: 9;
   .logo {
     margin: 7px 0 0 20px;
@@ -80,14 +76,14 @@ header {
       .nav-link {
         font-size: 18px;
         font-weight: 500;
-        color: $black;
+        color: $white;
         text-align: center;
         transition: .3s;
         &.active {
-          color: $white;
+          color: $gray-400;
         }
         &:hover {
-          color: $gray-400;
+          color: $gray-600;
         }
       }
     }
@@ -98,6 +94,7 @@ header {
         margin: 10px 20px 0 0;
         width: 36px;
         height: 36px;
+        filter: invert(100%);
       }
     }
   }

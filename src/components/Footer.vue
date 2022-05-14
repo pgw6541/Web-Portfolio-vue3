@@ -24,7 +24,7 @@ footer{
   box-sizing: border-box;
   padding: 20px 0 20px;
   a {
-    color: $black;
+    color: $white;
     font-size: 11px;
     text-decoration: none;
     &:hover {
