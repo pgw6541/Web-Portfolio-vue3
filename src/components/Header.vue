@@ -38,7 +38,7 @@ export default {
     return {
       navigations: [
         {
-          name: 'About',
+          name: 'Home',
           href: '/'
         },
         {
