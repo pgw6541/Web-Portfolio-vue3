@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="container">
     <Works />
   </div>
 </template>
@@ -15,7 +15,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .section {
+  .container {
+    padding-top: 85px;
     padding-bottom: 100px;
   }
 </style>

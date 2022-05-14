@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="section">
     <!-- Work -->
     <a
       class="workBox"
@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .container {
+  .section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

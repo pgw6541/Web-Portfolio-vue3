@@ -9,9 +9,9 @@
 
 <style lang="scss" scoped>
   .container {
+    padding-top: 85px;
     h4 {
       color: $white;
     }
-    height: 100vh;
   }
 </style>

@@ -1,5 +1,6 @@
 <template>
-  <div class="section">
+  <div
+    class="section">
     <div class="container">
       <div class="article1 profile">
         <img
@@ -20,17 +21,18 @@
 import { mapState } from 'vuex'
 
 export default {
-ted: {
+  computed: {
     ...mapState('about' [
       'name',
       'email'
     ])
-  }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-.container {
-  height: 100vh;
-}
+  .container {
+    padding-top: 85px;
+    height: 1500px;
+  }
 </style>

@@ -1,5 +1,7 @@
 <template>
-  <header>
+  <header 
+    class="header navber"
+    :class="{ 'navber--hidden': !showNavbar}">
     <div class="logo">
       <img
         src="~/assets/logo.png"
@@ -47,28 +49,68 @@ export default {
           name: 'Interests',
           href: '/interests'
         },
-      ]
+      ],
+      showNavbar: true,
+      lastScrollPosition: 0
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.onScroll)
+  },
+
+  unmounted() {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+  methods: {
+    onScroll() {
+      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+      if(currentScrollPosition < 0) {
+        return
+      }
+      if(Math.abs(currentScrollPosition - this.lastScrollPosition) < 60){
+        return
+      }
+      this.showNavbar = currentScrollPosition < this.lastScrollPosition
+      this.lastScrollPosition = currentScrollPosition
     }
   }
+
 }
 </script>
 
 
 <style lang="scss" scoped>
 header {
+  width: 100%;
   height: 70px;
   background-color: $black;
   border-bottom: 2px solid $primary;
   box-sizing: border-box;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  position: fixed;
+  transform: translate3d(0, 0, 0);
+  transition: all .35s ease-out;
+
   z-index: 9;
+  &.navber--hidden {
+    transform: translate3d(0, -100%, 0);
+  }
+   // 최상단에서만 보이게
+  // &.scrollDown {
+  //   position: fixed;
+  //   transform: translate(0, -70px);
+  // }
+  
+
   .logo {
     margin-left: 20px;
     img {
-      width: 46px;
+      width: 30px;
+      opacity: 0;
     }
   }
   .nav {
@@ -81,11 +123,11 @@ header {
       .nav-link {
         font-size: 18px;
         font-weight: 500;
-        color: $white;
+        color: $gray-400;
         text-align: center;
-        transition: .3s;
+        transition: .2s;
         &.active {
-          color: $gray-400;
+          color: $white;
         }
         &:hover {
           color: $gray-600;
