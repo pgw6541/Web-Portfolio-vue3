@@ -67,7 +67,7 @@ export default {
       if(currentScrollPosition < 0) {
         return
       }
-      if(Math.abs(currentScrollPosition - this.lastScrollPosition) < 60){
+      if(Math.abs(currentScrollPosition - this.lastScrollPosition) < 50){
         return
       }
       this.showNavbar = currentScrollPosition < this.lastScrollPosition
@@ -83,8 +83,8 @@ export default {
 header {
   width: 100%;
   height: 70px;
-  background-color: $black;
-  border-bottom: 2px solid $primary;
+  background-color: rgba(0,0,0,.5);
+  border-bottom: 3px solid $primary;
   box-sizing: border-box;
 
   display: flex;
@@ -123,7 +123,7 @@ header {
       .nav-link {
         font-size: 18px;
         font-weight: 500;
-        color: $gray-400;
+        color: $gray-500;
         text-align: center;
         transition: .2s;
         &.active {
