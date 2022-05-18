@@ -1,19 +1,19 @@
 <template>
-  <div class="section">
+  <div class="section1">
     <!-- Parallax -->
     <div class="para">
       <div class="para_img"></div>
       <div class="para_text">
         <p>
-          <span class="text"></span>
-          <span class="blink">|</span>
+          <span class="text">Welcome to my portfolio</span>
+          <br />
+          <span class="typing"></span>
         </p>
       </div>
     </div>
-
-    <div class="container">
-    </div> <!--container-->
-  </div> <!-- section -->
+  </div> <!-- section1 -->
+  <div class="container">
+  </div> <!--container-->
 </template>
 <script>
 import { mapState } from 'vuex'
@@ -25,20 +25,57 @@ export default {
       'email'
     ])
   },
-  methods: {
-    typingEffect() {
-      const content = "안녕하세요. \n 프론트엔드 개발자 \n 박건우 입니다.";
-      const text = document.querySelector(".text");
-      let i = 0;
+  methods: {    
+    // typingEffect() {
+      // 줄바꾸며 타이핑
+    //   const content = "안녕하세요. \n 프론트엔드 개발자 \n 박건우 입니다.";
+    //   const text = document.querySelector(".text");
+    //   let i = 0;
 
-      function typing(){
-        if (i < content.length) {
-          let txt = content.charAt(i);
-          text.innerHTML += txt=== "\n" ? "<br />": txt;
-          i++;
-        }
-      }
-      setInterval(typing, 150)
+    //   function typing(){
+    //     if (i < content.length) {
+    //       let txt = content.charAt(i);
+    //       text.innerHTML += txt=== "\n" ? "<br />": txt;
+    //       i++;
+    //     }
+    //   }
+    //   setInterval(typing, 150)
+    // }
+
+    typingEffect() {
+      let typeText = document.querySelector(".typing")
+      // let textToBeTyped = "박건우입니다."
+      let textToBeTypedArr = ["사용자을 생각하며", "꾸준히 노력하는", "프론트엔드 개발자", "박건우 입니다.","반갑습니다."]
+      let index = 0, isAdding = true, textToBeTypedIndex = 0
+      
+      function playAnim() {
+        setTimeout(function () {
+          typeText.innerText = textToBeTypedArr[textToBeTypedIndex].slice(0, index)
+          if (isAdding) {
+            if (index > textToBeTypedArr[textToBeTypedIndex].length) {
+              isAdding = false
+              setTimeout(function () {
+                playAnim()
+              }, 2000)
+              return
+            } else {
+              index++
+            }
+          } else {
+            if (index === 0) {
+              isAdding = true
+              textToBeTypedIndex = (textToBeTypedIndex + 1) % textToBeTypedArr.length
+            } else {
+              // decrement index by 1
+              index--
+            }
+          }
+          // call itself
+          playAnim()
+        }, isAdding ? 120 : 60)
+}
+// start animation
+playAnim()
     }
   },
   mounted() {
@@ -48,7 +85,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.section{
+.section1 {
   .para {
     width: 100%;
     height: 90vh;
@@ -65,34 +102,53 @@ export default {
         background-color: $black;
         top: 0;
         left: 0;
-        opacity: .7;
+        opacity: .8;
       }
     }
     .para_text {
-      width: $inner;
+      width: 100%;
       height: 100%;
       position: absolute;
       display: flex;
       // Center
       justify-content: center;
       align-items: center;
-      text-align: left;
+      text-align: center;
       p {
         color: $white;
-        width: 50%;
+        // width: 75%;
         line-height: 2;
       }
       span.text {
+        font-family: "Dancing Script", serif;
         font-weight: bold;
-        font-size: 32px;
+        font-size: 96px;
       }
-      span.blink {
-        animation: blink .85s infinite;
+      span.typing {
+        font-family: "Noto Sans KR", serif;
         font-weight: normal;
-        font-size: 38px;
+        font-size: 46px;
+        &::after {
+          content: "|";
+          animation: blink 1s step-end infinite;
+          color: #fff;
+          font-size: 60px;
+          line-height: 1.25;
+          font-weight: normal;
+        }
+
       }
       @keyframes blink {
-        to {
+        0% {
+          opacity: 1;
+        }
+        49% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
           opacity: 0;
         }
       }
@@ -100,8 +156,10 @@ export default {
     }
   }
   .container {
-    padding-top: 85px;
     height: 1500px;
+    .section2 {
+    }
   }
 }
+
 </style>
