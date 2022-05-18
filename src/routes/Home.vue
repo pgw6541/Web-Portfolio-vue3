@@ -45,7 +45,7 @@ export default {
     typingEffect() {
       let typeText = document.querySelector(".typing")
       // let textToBeTyped = "박건우입니다."
-      let textToBeTypedArr = ["사용자을 생각하며", "꾸준히 노력하는", "프론트엔드 개발자", "박건우 입니다.","반갑습니다."]
+      let textToBeTypedArr = ["사용자을 생각하며", "꾸준히 노력하는", "프론트엔드 개발자", "박건우 입니다.","",""]
       let index = 0, isAdding = true, textToBeTypedIndex = 0
       
       function playAnim() {
