@@ -1,29 +1,31 @@
 <template>
-  <div class="section section1">
-    <!-- Parallax -->
-    <div class="para">
-      <div class="para_img"></div>
-      <div class="para_text">
-        <p>
-          <span class="text">Welcome to my portfolio</span>
-          <br />
-          <span class="typing"></span>
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="section section2">
+  <section class="section1">
+    <Homesec1 />
+  </section>
+  <section class="section2">
     <Homesec2 />
-  </div>
+  </section>
+  <section class="section3">
+    <Homesec3 />
+  </section>
+  <section class="section4">
+    <Homesec4 />
+  </section>
 </template>
 <script>
 import { mapState } from 'vuex'
+import Homesec1 from "~/components/Home_sec1.vue";
 import Homesec2 from "~/components/Home_sec2.vue";
+import Homesec3 from "~/components/Home_sec3.vue";
+import Homesec4 from "~/components/Home_sec4.vue";
 
 export default {
 
   components: {
-    Homesec2
+    Homesec1,
+    Homesec2,
+    Homesec3,
+    Homesec4,
   },
   computed: {
     ...mapState('about' [
@@ -31,139 +33,23 @@ export default {
       'email'
     ])
   },
-  methods: {    
-    // typingEffect() {
-      // 줄바꾸며 타이핑
-    //   const content = "안녕하세요. \n 프론트엔드 개발자 \n 박건우 입니다.";
-    //   const text = document.querySelector(".text");
-    //   let i = 0;
-
-    //   function typing(){
-    //     if (i < content.length) {
-    //       let txt = content.charAt(i);
-    //       text.innerHTML += txt=== "\n" ? "<br />": txt;
-    //       i++;
-    //     }
-    //   }
-    //   setInterval(typing, 150)
-    // }
-
-    typingEffect() {
-      let typeText = document.querySelector(".typing")
-      // let textToBeTyped = "박건우입니다."
-      let textToBeTypedArr = ["사용자을 생각하며", "꾸준히 노력하는", "프론트엔드 개발자", "박건우 입니다.",""]
-      let index = 0, isAdding = true, textToBeTypedIndex = 0
-      
-      function playAnim() {
-        setTimeout(function () {
-          typeText.innerText = textToBeTypedArr[textToBeTypedIndex].slice(0, index)
-          if (isAdding) {
-            if (index > textToBeTypedArr[textToBeTypedIndex].length) {
-              isAdding = false
-              setTimeout(function () {
-                playAnim()
-              }, 2000)
-              return
-            } else {
-              index++
-            }
-          } else {
-            if (index === 0) {
-              isAdding = true
-              textToBeTypedIndex = (textToBeTypedIndex + 1) % textToBeTypedArr.length
-            } else {
-              // decrement index by 1
-              index--
-            }
-          }
-          // call itself
-          playAnim()
-        }, isAdding ? 120 : 60)
-}
-// start animation
-playAnim()
-    }
-  },
-  mounted() {
-    this.typingEffect()
-  }
 }
 </script>
 
 <style lang="scss" scoped>
-.section {
+section {
   color: $white;
+  padding: 100px 0 100px;
 }
 .section1 {
-  .para {
-    width: 100%;
-    height: 90vh;
-    background: url('~/assets/parallax_img.jpg') no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    .para_img {
-      &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: $black;
-        top: 0;
-        left: 0;
-        opacity: .8;
-      }
-    }
-    .para_text {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      display: flex;
-      // Center
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      p {
-        line-height: 2;
-      }
-      span.text {
-        font-family: "Dancing Script", serif;
-        font-weight: bold;
-        font-size: 96px;
-      }
-      span.typing {
-        font-family: "Noto Sans KR", serif;
-        font-weight: normal;
-        font-size: 46px;
-        &::after {
-          content: "|";
-          animation: blink 1s step-end infinite;
-          font-size: 60px;
-          line-height: 1.25;
-          font-weight: normal;
-        }
-
-      }
-      @keyframes blink {
-        0% {
-          opacity: 1;
-        }
-        49% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-
-    }
-  }
-}
-.section2 {
-  padding-top: 100px;
+  color: $white;
+  padding-top: 0;
+  width: 100%;
+  height: 90vh;
+  background: url('~/assets/parallax_img.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
 }
 
 </style>

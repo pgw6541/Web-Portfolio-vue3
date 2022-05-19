@@ -22,7 +22,7 @@ export default {
 footer{
   text-align: center;
   box-sizing: border-box;
-  padding: 20px 0 20px;
+  padding: 100px 0 20px;
   a {
     color: $white;
     font-size: 11px;
