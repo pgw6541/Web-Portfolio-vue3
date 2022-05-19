@@ -14,23 +14,7 @@
 
 <script>
 export default {
-    methods: {    
-    // typingEffect() {
-      // 줄바꾸며 타이핑
-    //   const content = "안녕하세요. \n 프론트엔드 개발자 \n 박건우 입니다.";
-    //   const text = document.querySelector(".text");
-    //   let i = 0;
-
-    //   function typing(){
-    //     if (i < content.length) {
-    //       let txt = content.charAt(i);
-    //       text.innerHTML += txt=== "\n" ? "<br />": txt;
-    //       i++;
-    //     }
-    //   }
-    //   setInterval(typing, 150)
-    // }
-
+  methods: {
     typingEffect() {
       let typeText = document.querySelector(".typing")
       // let textToBeTyped = "박건우입니다."
@@ -75,63 +59,51 @@ export default {
 
 <style lang="scss" scoped>
 .para {
-    .para_img {
+  .para_text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    // Center
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    p {
+      line-height: 2;
+    }
+    span.text {
+      font-family: "Dancing Script", serif;
+      font-weight: bold;
+      font-size: 96px;
+    }
+    span.typing {
+      font-family: "Noto Sans KR", serif;
+      font-weight: normal;
+      font-size: 46px;
       &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: $black;
-        top: 0;
-        left: 0;
-        opacity: .8;
-      }
-    }
-    .para_text {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      display: flex;
-      // Center
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      p {
-        line-height: 2;
-      }
-      span.text {
-        font-family: "Dancing Script", serif;
-        font-weight: bold;
-        font-size: 96px;
-      }
-      span.typing {
-        font-family: "Noto Sans KR", serif;
+        content: "|";
+        animation: blink 1s step-end infinite;
+        font-size: 60px;
+        line-height: 1.25;
         font-weight: normal;
-        font-size: 46px;
-        &::after {
-          content: "|";
-          animation: blink 1s step-end infinite;
-          font-size: 60px;
-          line-height: 1.25;
-          font-weight: normal;
-        }
-
-      }
-      @keyframes blink {
-        0% {
-          opacity: 1;
-        }
-        49% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 0;
-        }
       }
 
     }
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      49% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
   }
+}
 </style>

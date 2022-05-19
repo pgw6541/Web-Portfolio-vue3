@@ -46,10 +46,22 @@ section {
   padding-top: 0;
   width: 100%;
   height: 90vh;
-  background: url('~/assets/parallax_img.jpg') no-repeat center;
+  background: url('~/assets/background_img.jpg') no-repeat center/cover,rgba(0,0,0,.9);
   background-size: cover;
   background-attachment: fixed;
-  position: relative;
+  background-blend-mode: multiply;
+}
+.section2 {
+  color: $white;
+  width: 100%;
+  background: url('~/assets/background_img2.jpg') no-repeat center/cover,rgba(0,0,0,.9);
+  background-blend-mode: multiply;
+}
+.section3 {
+  color: $white;
+  width: 100%;
+  background: url('~/assets/section3_img.jpg') no-repeat center/cover,rgba(0,0,0,.9);
+  background-blend-mode: multiply;
 }
 
 </style>

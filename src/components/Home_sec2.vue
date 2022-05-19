@@ -1,4 +1,5 @@
 <template>
+  <div class="bg_img"></div>
   <div class="container">
     <article class="article1">
       <div class="textBox">
