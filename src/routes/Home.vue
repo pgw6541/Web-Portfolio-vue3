@@ -1,5 +1,5 @@
 <template>
-  <div class="section1">
+  <div class="section section1">
     <!-- Parallax -->
     <div class="para">
       <div class="para_img"></div>
@@ -11,14 +11,20 @@
         </p>
       </div>
     </div>
-  </div> <!-- section1 -->
-  <div class="container">
-  </div> <!--container-->
+  </div>
+  <div class="section section2">
+    <Homesec2 />
+  </div>
 </template>
 <script>
 import { mapState } from 'vuex'
+import Homesec2 from "~/components/Home_sec2.vue";
 
 export default {
+
+  components: {
+    Homesec2
+  },
   computed: {
     ...mapState('about' [
       'name',
@@ -45,7 +51,7 @@ export default {
     typingEffect() {
       let typeText = document.querySelector(".typing")
       // let textToBeTyped = "박건우입니다."
-      let textToBeTypedArr = ["사용자을 생각하며", "꾸준히 노력하는", "프론트엔드 개발자", "박건우 입니다.","",""]
+      let textToBeTypedArr = ["사용자을 생각하며", "꾸준히 노력하는", "프론트엔드 개발자", "박건우 입니다.",""]
       let index = 0, isAdding = true, textToBeTypedIndex = 0
       
       function playAnim() {
@@ -85,6 +91,9 @@ playAnim()
 </script>
 
 <style lang="scss" scoped>
+.section {
+  color: $white;
+}
 .section1 {
   .para {
     width: 100%;
@@ -115,8 +124,6 @@ playAnim()
       align-items: center;
       text-align: center;
       p {
-        color: $white;
-        // width: 75%;
         line-height: 2;
       }
       span.text {
@@ -131,7 +138,6 @@ playAnim()
         &::after {
           content: "|";
           animation: blink 1s step-end infinite;
-          color: #fff;
           font-size: 60px;
           line-height: 1.25;
           font-weight: normal;
@@ -155,11 +161,9 @@ playAnim()
 
     }
   }
-  .container {
-    height: 1500px;
-    .section2 {
-    }
-  }
+}
+.section2 {
+  padding-top: 100px;
 }
 
 </style>
