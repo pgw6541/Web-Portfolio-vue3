@@ -97,7 +97,7 @@ header {
 
   z-index: 9;
   &.navber--hidden {
-    transform: translate3d(0, -70px, 0);
+    transform: translate3d(0, -100%, 0);
   }
    // 최상단에서만 보이게
   // &.scrollDown {
@@ -144,7 +144,11 @@ header {
       img {
         width: 36px;
         margin-right: 20px;
-        filter: invert(100%);
+        filter: invert(70%);
+        transition: .2s;
+        &:hover {
+          filter: invert(100%);
+        }
       }
     }
   }
