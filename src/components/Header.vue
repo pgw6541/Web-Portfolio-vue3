@@ -14,7 +14,7 @@
         class="nav-item">
         <RouterLink
           :to="nav.href"
-          active-class="active"
+          active-class="nav-active"
           class="nav-link">
           {{ nav.name }}
         </RouterLink>
@@ -83,7 +83,7 @@ export default {
 header {
   width: 100%;
   height: 70px;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,.9);
   border-bottom: 3px solid $primary;
   box-sizing: border-box;
 
@@ -97,7 +97,7 @@ header {
 
   z-index: 9;
   &.navber--hidden {
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -70px, 0);
   }
    // 최상단에서만 보이게
   // &.scrollDown {
@@ -125,12 +125,16 @@ header {
         font-weight: 500;
         color: $gray-500;
         text-align: center;
-        transition: .2s;
-        &.active {
+        @include magic-border(1px, $primary, .1s, 1);
+        &:hover {
           color: $white;
         }
-        &:hover {
-          color: $gray-600;
+        &.nav-active {
+          color: $white;
+          box-sizing: border-box;
+          background-color: $primary;
+          border-radius: 0;
+          @include magic-border(0px, $primary, .1s, 1);
         }
       }
     }

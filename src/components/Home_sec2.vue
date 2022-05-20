@@ -19,20 +19,21 @@
           <li><span class="after">2015</span> - 대학과학기술대학교 컴퓨터정보과 15학번 입학</li>
           <li><span class="after">2016~2018</span> - 제28사단 육군 병장 만기전역</li>
           <li><span class="after">2020</span> - 대전과학기술대학교 컴퓨터정보과 졸업</li>
-          <li><span class="after">2020</span> - 그린컴퓨터아카데미 - 웹퍼블리셔 과정 수료</li>
+          <li><span class="after">2020</span> - 그린컴퓨터아카데미 웹퍼블리셔 과정 수료</li>
           <li><span class="after">2021.02~.08</span> - (주)오라클식스코퍼레이션 웹퍼블리셔로 근무</li>
           <li><span class="after">2022</span> - 패스트캠퍼스 온라인강의 프론트엔드과정 수강</li>
           <li>
             <a
               href="https://github.com/pgw6541"
-              target="_blank">
+              target="_blank"
+              class="logo">
               <img
                 style="width:30px; filter: invert(100%);"
                 src="https://github.com/pgw6541/image_source/blob/master/gitHub.png?raw=true"
                 alt="github" />
             </a>
           </li>
-          <li class="title">
+          <li class="title license">
             <h1>License</h1>
           </li>
           <li><span class="after">2021.09</span> - 정보처리산업기사 필기합격</li>
@@ -52,7 +53,7 @@
   .container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
       .article1 {
         width: 60%;
@@ -64,13 +65,18 @@
           justify-content: space-between;
           ul.list {
             li.title {
-              margin-top: 20px;
               h1 {
                 font-weight: bold;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+                border-bottom: 1px dotted $gray-700;
               }
             }
+            li.license {
+              margin-top: 30px;
+            }
             li {
-              margin: 10px 0;
+              margin: 0 0 10px;
               span.after {
                 color: $gray-600;
               }

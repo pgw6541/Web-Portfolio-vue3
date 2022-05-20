@@ -71,9 +71,9 @@ section {
 }
 .section4 {
   color: $white;
-  width: 100%;
-  background: url('~/assets/background_img2.jpg') no-repeat center/cover,rgba(0,0,0,.8);
-  background-blend-mode: multiply;
+  // width: 100%;
+  // background: url('~/assets/background_img2.jpg') no-repeat center/cover,rgba(0,0,0,.8);
+  // background-blend-mode: multiply;
   display: flex;
   align-items: center;
 }
