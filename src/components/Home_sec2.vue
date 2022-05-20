@@ -3,12 +3,40 @@
   <div class="container">
     <article class="article1">
       <div class="textBox">
-        <p class="text txt1">
-          부모님께서 어렸을 때부터 늘 한 가지만 말씀하셨습니다. 아버지께서는 평소에 학교는 안 가도, 공부하지 않아도 항상 예절에 대해서는 중요시 얘기하셨으며, 어머니께서는 장래 희망을 말씀하실 때 항상 하고 싶은 걸 하라는 말씀을 듣고 자라왔습니다.
-          <br />
-          <br />
-          초등학교 6학년에 진학하면서 저는 ‘주전자닷컴’이라는 사이트에서 ‘Flash MX’로 간단한 게임과 애니메이션을 만드는 데에 취미가 있던 저는 호기심에 이끌려 ‘컴퓨터 프로그래머’를 목표로 가지게 되었습니다. 그 결과, 대학교에서 컴퓨터 정보학을 전공하였고 c언어, JAVA, 사물인터넷, 웹 디자인 및 퍼블리싱, 정보보안 등을 익힐 수 있는 기회가 있었습니다. 그러나, 공부하던 도중, 프로그래밍보다 작업에 결과물이 가시적으로 보이는 것에서 성취감을 느낄 수 있었던 웹 디자인에 관심을 가지게 되면서 졸업 후에 직업훈련을 통해 웹퍼블리셔를 접하면서 더 큰 흥미를 느끼게 되었으며 웹 전망을 바라보며 경쟁력을 가진 프론트엔드를 목표로 배움을 통한 자기발전을 목표로 하고있습니다
-        </p>
+        <ul class="list about">
+          <li class="title">
+            <h1>
+              About
+            </h1>
+          </li>
+          <li><span class="after">name</span> : 박 건우</li>
+          <li><span class="after">age</span> : 27세(96년생)</li>
+        </ul>
+        <ul class="list career">
+          <li class="title">
+            <h1>Career</h1>
+          </li>
+          <li><span class="after">2015</span> - 대학과학기술대학교 컴퓨터정보과 15학번 입학</li>
+          <li><span class="after">2016~2018</span> - 제28사단 육군 병장 만기전역</li>
+          <li><span class="after">2020</span> - 대전과학기술대학교 컴퓨터정보과 졸업</li>
+          <li><span class="after">2020</span> - 그린컴퓨터아카데미 - 웹퍼블리셔 과정 수료</li>
+          <li><span class="after">2021.02~.08</span> - (주)오라클식스코퍼레이션 웹퍼블리셔로 근무</li>
+          <li><span class="after">2022</span> - 패스트캠퍼스 온라인강의 프론트엔드과정 수강</li>
+          <li>
+            <a
+              href="https://github.com/pgw6541"
+              target="_blank">
+              <img
+                style="width:30px; filter: invert(100%);"
+                src="https://github.com/pgw6541/image_source/blob/master/gitHub.png?raw=true"
+                alt="github" />
+            </a>
+          </li>
+          <li class="title">
+            <h1>License</h1>
+          </li>
+          <li><span class="after">2021.09</span> - 정보처리산업기사 필기합격</li>
+        </ul>
       </div>
     </article>
     <article class="article2">
@@ -27,17 +55,31 @@
       justify-content: space-between;
       align-items: center;
       .article1 {
-          width: 60%;
+        width: 60%;
         .textBox {
           font-size: 15px;
-          padding: 5%;
-          border: 1px solid #fff;
-          border-radius: 10px;
           letter-spacing: 0.1rem;
+          padding: 5%;
+          display: flex;
+          justify-content: space-between;
+          ul.list {
+            li.title {
+              margin-top: 20px;
+              h1 {
+                font-weight: bold;
+              }
+            }
+            li {
+              margin: 10px 0;
+              span.after {
+                color: $gray-600;
+              }
+            }
+          }
         }
       }
       .article2 {
-        width: 30%;
+        width: 25%;
         text-align: center;
         img.headShot {
           width: 100%;

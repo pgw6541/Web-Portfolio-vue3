@@ -54,8 +54,16 @@ export default {
   article {
     display: flex;
     justify-content: space-evenly;
-    img {
-      filter: invert(100%);
+    .logo {
+      img {
+        transition: .3s;
+        filter: invert(100%);
+        &:hover {
+          filter: invert(70%);
+          transform: scale(1.1);
+          
+        }
+      }
     }
   }
 }

@@ -54,14 +54,28 @@ section {
 .section2 {
   color: $white;
   width: 100%;
-  background: url('~/assets/background_img2.jpg') no-repeat center/cover,rgba(0,0,0,.9);
+  height: 90vh;
+  background: url('~/assets/background_img2.jpg') no-repeat center/cover,rgba(0,0,0,.85);
   background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
 }
 .section3 {
   color: $white;
   width: 100%;
-  background: url('~/assets/section3_img.jpg') no-repeat center/cover,rgba(0,0,0,.9);
+  height: 90vh;
+  background: url('~/assets/section3_img.jpg') no-repeat center/cover,rgba(0,0,0,.8);
   background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+}
+.section4 {
+  color: $white;
+  width: 100%;
+  background: url('~/assets/background_img2.jpg') no-repeat center/cover,rgba(0,0,0,.8);
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
 }
 
 </style>
