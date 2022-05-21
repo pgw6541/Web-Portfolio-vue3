@@ -1,22 +1,29 @@
 <template>
-  <div class="container">
-    <section class="section interests">
-      <h4>작업중인 페이지입니다.</h4>
-      <RouterView />
-    </section>
-  </div>
+  <section class="section1 interests">
+    <InterHeader />
+  </section>
+  <section class="section2">
+    <RouterView />
+  </section>
 </template>
 
-<style lang="scss" scoped>
-  .container {
-    padding-top: 85px;
-    height: 90vh;
-    section {
-      text-align: center;
-      margin-top: 80px;
-      h4 {
-        color: $white;
-      }
-    }
+<script>
+import InterHeader from "~/components/Inter_header"
+export default {
+  components: {
+    InterHeader
   }
+}
+</script>
+
+<style lang="scss" scoped>
+section {
+  text-align: center;
+}
+.section1 {
+  padding-top: 85px;
+}
+.section2 {
+  color: $white;
+}
 </style>

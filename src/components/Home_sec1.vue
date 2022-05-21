@@ -8,6 +8,7 @@
         <br />
         <span class="typing"></span>
       </p>
+      <div class="arrow"></div>
     </div>
   </div>
 </template>
@@ -18,7 +19,7 @@ export default {
     typingEffect() {
       let typeText = document.querySelector(".typing")
       // let textToBeTyped = "박건우입니다."
-      let textToBeTypedArr = ["","","사용자을 생각하며","꾸준히 노력하는", "프론트엔드 개발자", "박건우 입니다."]
+      let textToBeTypedArr = ["","","사용자를 생각하며","꾸준히 노력하는", "프론트엔드 개발자", "박건우 입니다."]
       let index = 0, isAdding = true, textToBeTypedIndex = 0
       
       function playAnim() {
@@ -59,9 +60,11 @@ export default {
 
 <style lang="scss" scoped>
 .para {
+  width: 100%;
+  height: inherit;
   .para_text {
-    width: 100%;
-    height: 100%;
+    width: inherit;
+    height: inherit;
     position: absolute;
     display: flex;
     // Center
@@ -87,7 +90,6 @@ export default {
         line-height: 1.25;
         font-weight: normal;
       }
-
     }
     @keyframes blink {
       0% {
@@ -103,7 +105,48 @@ export default {
         opacity: 0;
       }
     }
-
+    .arrow {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      width: 30px;
+      height: 50px;
+      margin-left: -15px;
+      border: 2px solid $gray-800;
+      border-radius: 50px;
+      box-sizing: border-box;
+      z-index: 3;
+      &::before {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        content: '';
+        width: 6px;
+        height: 6px;
+        margin-left: -3px;
+        background-color: $gray-800;
+        border-radius: 100%;
+        -webkit-animation: dot 2s infinite;
+        animation: dot 2s infinite;
+        box-sizing: border-box;
+      }
+    }
+    @keyframes dot {
+      0% {
+        transform: translate(0, 0);
+        opacity: 0;
+      }
+      40% {
+        opacity: 1;
+      }
+      80% {
+        transform: translate(0, 10px);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
   }
 }
 </style>

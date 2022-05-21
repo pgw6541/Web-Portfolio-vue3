@@ -45,7 +45,7 @@ section {
   color: $white;
   padding-top: 0;
   width: 100%;
-  height: 90vh;
+  height: 95vh;
   background: url('~/assets/background_img.jpg') no-repeat center/cover,rgba(0,0,0,.9);
   background-size: cover;
   background-attachment: fixed;
@@ -55,6 +55,7 @@ section {
   color: $white;
   width: 100%;
   height: 90vh;
+  background-color: transparent;
   background: url('~/assets/background_img2.jpg') no-repeat center/cover,rgba(0,0,0,.85);
   background-blend-mode: multiply;
   display: flex;
@@ -62,20 +63,19 @@ section {
 }
 .section3 {
   color: $white;
+  display: flex;
+  align-items: center;
+}
+.section4 {
+  color: $white;
   width: 100%;
   height: 90vh;
   background: url('~/assets/section3_img.jpg') no-repeat center/cover,rgba(0,0,0,.8);
   background-blend-mode: multiply;
   display: flex;
   align-items: center;
-}
-.section4 {
-  color: $white;
-  // width: 100%;
-  // background: url('~/assets/background_img2.jpg') no-repeat center/cover,rgba(0,0,0,.8);
-  // background-blend-mode: multiply;
-  display: flex;
-  align-items: center;
+  border-top-right-radius: 15%;
+  border-bottom-left-radius: 15%;
 }
 
 </style>
