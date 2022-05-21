@@ -19,7 +19,7 @@
           <li><span class="after">2015</span> - 대학과학기술대학교 컴퓨터정보과 15학번 입학</li>
           <li><span class="after">2016~2018</span> - 제28사단 육군 병장 만기전역</li>
           <li><span class="after">2020</span> - 대전과학기술대학교 컴퓨터정보과 졸업</li>
-          <li><span class="after">2020</span> - 그린컴퓨터아카데미 웹퍼블리셔 과정 수료</li>
+          <li><span class="after">2020</span> - 이젠컴퓨터아카데미 웹퍼블리셔 과정 수료</li>
           <li><span class="after">2021.02~.08</span> - (주)오라클식스코퍼레이션 웹퍼블리셔로 근무</li>
           <li><span class="after">2022</span> - 패스트캠퍼스 온라인강의 프론트엔드과정 수강</li>
           <li>
