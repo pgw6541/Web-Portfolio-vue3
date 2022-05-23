@@ -8,13 +8,24 @@
         <br />
         <span class="typing"></span>
       </p>
-      <div class="arrow"></div>
+      <div
+        class="arrow"
+        v-show="visible">
+        <span></span>
+        <span></span>
+        <!-- <span></span> -->
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      visible: true,
+    }
+  },
   methods: {
     typingEffect() {
       let typeText = document.querySelector(".typing")
@@ -50,10 +61,21 @@ export default {
       }
           // start animation
           playAnim()
+    },
+    handleScroll() {
+      const scrollY = window.scrollY
+      console.log(scrollY)
+      if (scrollY > 300) {
+        this.visible = false
+      } else if (scrollY < 300) {
+        this.visible = true
+      }
     }
   },
   mounted() {
     this.typingEffect()
+    window.addEventListener("scroll", this.handleScroll)
+    
   }
 }
 </script>
@@ -107,41 +129,36 @@ export default {
     }
     .arrow {
       position: absolute;
-      bottom: 30px;
+      bottom: 60px;
+      span {
+      position: absolute;
+      top: 0;
       left: 50%;
-      width: 30px;
-      height: 50px;
-      margin-left: -15px;
-      border: 2px solid $gray-800;
-      border-radius: 50px;
+      width: 18px;
+      height: 18px;
+      margin-left: -12px;
+      border-left: 1px solid $gray-700;
+      border-bottom: 1px solid $gray-700;
+      transform: rotate(-45deg);
+      animation: arrow 1s infinite;
+      opacity: 0;
       box-sizing: border-box;
       z-index: 3;
-      &::before {
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        content: '';
-        width: 6px;
-        height: 6px;
-        margin-left: -3px;
-        background-color: $gray-800;
-        border-radius: 100%;
-        -webkit-animation: dot 2s infinite;
-        animation: dot 2s infinite;
-        box-sizing: border-box;
+        &:nth-child(1) {
+          animation-delay: 0s;
+        }
+        &:nth-child(2) {
+          top: 14px;
+          animation-delay: .15s;
+        }
       }
     }
-    @keyframes dot {
+    @keyframes arrow {
       0% {
-        transform: translate(0, 0);
         opacity: 0;
       }
-      40% {
+      50% {
         opacity: 1;
-      }
-      80% {
-        transform: translate(0, 10px);
-        opacity: 0;
       }
       100% {
         opacity: 0;
