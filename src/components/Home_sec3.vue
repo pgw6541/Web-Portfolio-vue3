@@ -67,9 +67,9 @@ export default {
     border-radius :30% 70% 70% 30% / 30% 30% 70% 70%;
     box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
     animation: morphing 10s infinite;
-    &:hover {
-      animation-play-state: paused;
-    }
+    // &:hover {
+    //   animation-play-state: paused;
+    // }
     h1 {
       color: white;
       font-family: "Oswald", sans-serif;
