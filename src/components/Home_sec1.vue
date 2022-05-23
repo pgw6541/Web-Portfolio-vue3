@@ -64,10 +64,9 @@ export default {
     },
     handleScroll() {
       const scrollY = window.scrollY
-      console.log(scrollY)
-      if (scrollY > 300) {
+      if (scrollY > 400) {
         this.visible = false
-      } else if (scrollY < 300) {
+      } else if (scrollY < 400) {
         this.visible = true
       }
     }
