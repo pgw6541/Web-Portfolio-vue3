@@ -93,7 +93,7 @@ header {
 
   position: fixed;
   transform: translate3d(0, 0, 0);
-  transition: all .35s ease-out;
+  transition: all .2s ease-out;
 
   z-index: 9;
   &.navber--hidden {
