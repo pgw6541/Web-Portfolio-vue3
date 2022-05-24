@@ -15,9 +15,14 @@
         <span
           class="bubble_box"
           :class="logo.name">
-          <p>
-            {{ logo.text }}
-          </p>
+          <div>
+            <h1>
+              {{ logo.title }}
+            </h1>
+            <p>
+              {{ logo.text }}
+            </p>
+          </div>
         </span>
       </div>
     </article>
@@ -31,33 +36,39 @@ export default {
       logos: [
         {
           name: "html5",
+          title: "HTML",
           url: "https://raw.githubusercontent.com/pgw6541/image_source/master/Web-Portfolio/html5.png",
-          text: "HTML에 대한 설명입니다."
+          text: "웹 표준, 시멘틱 마크업 등 꾸준히 학습하는 중입니다."
         },
         {
           name: "css3",
+          title: "CSS3",
           url: "https://raw.githubusercontent.com/pgw6541/image_source/master/Web-Portfolio/css3.png",
-          text: "CSS3에 대한 설명입니다."
+          text: "웹 최적화, 성능 향상을 위해 프레임워크 및 신기술 동향을 살핍니다."
         },
         {
-          name: "scss",
+          name: "sass",
+          title: "Sass(Scss)",
           url: "https://raw.githubusercontent.com/pgw6541/image_source/master/Web-Portfolio/sass.png",
-          text: "Scss에 대한 설명입니다."
+          text: "최근에 접하게되었으며 흥미롭게 배워가는 중입니다."
         },
         {
           name: "javascript",
+          title: "JavaScript",
           url: "https://raw.githubusercontent.com/pgw6541/image_source/master/Web-Portfolio/javascript.png",
-          text: "JavaScript에 대한 설명입니다."
+          text: "꾸준히 복습하며, 라이브러리 사용에 관심이 많습니다."
         },
         {
           name: "vue",
+          title: "Vue",
           url: "https://raw.githubusercontent.com/pgw6541/image_source/master/Web-Portfolio/vue.png",
-          text: "Vue에 대한 설명입니다."
+          text: "처음 배워보는 SPA프레임워크, 흥미롭게 배우고 있으며 다른 프레임워크에도 관심이 있습니다."
         },
         {
           name: "webpack",
+          title: "WebPack",
           url: "https://raw.githubusercontent.com/pgw6541/image_source/master/Web-Portfolio/webpack.png",
-          text: "Webpack에 대한 설명입니다."
+          text: "많은 부분이 생소하나 모듈 및 플로그인 관리가 흥미로워 배워나가고 있습니다."
         },
       ]
     }
@@ -121,13 +132,12 @@ export default {
       }
       img.html5 {filter: invert(45%) sepia(50%) saturate(5613%) hue-rotate(348deg) brightness(93%) contrast(90%); &:hover + span.html5 {opacity: 1;}}
       img.css3 {filter: invert(38%) sepia(31%) saturate(1816%) hue-rotate(168deg) brightness(92%) contrast(94%); &:hover + span.css3 {opacity: 1;}}
-      img.scss {filter: invert(56%) sepia(45%) saturate(661%) hue-rotate(283deg) brightness(85%) contrast(86%); &:hover + span.scss {opacity: 1;}}
+      img.sass {filter: invert(56%) sepia(45%) saturate(661%) hue-rotate(283deg) brightness(85%) contrast(86%); &:hover + span.sass {opacity: 1;}}
       img.javascript {filter: invert(96%) sepia(48%) saturate(6450%) hue-rotate(339deg) brightness(101%) contrast(94%); &:hover + span.javascript {opacity: 1;}}
       img.vue {filter: invert(68%) sepia(31%) saturate(645%) hue-rotate(101deg) brightness(91%) contrast(90%); &:hover + span.vue {opacity: 1;}}
       img.webpack {filter: invert(95%) sepia(13%) saturate(6639%) hue-rotate(172deg) brightness(100%) contrast(98%); &:hover + span.webpack {opacity: 1;}}
 
       .bubble_box {
-        color: $black;
         width: 250px;
         height: 100px;
         margin-bottom: 20px;
@@ -140,6 +150,16 @@ export default {
         transform: translateX(50%);
         transition: opacity .3s;
         opacity: 0;
+        h1 {
+          color: $gray-700;
+          font-size: 12px;
+          margin: 0 auto 5px;
+          padding-bottom: 5px;
+        }
+        p {
+          color: $black;
+          font-size: 14px;
+        }
         &:after {
           content: '';
           position: absolute;
