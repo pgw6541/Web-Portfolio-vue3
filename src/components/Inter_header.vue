@@ -42,11 +42,20 @@ export default {
 header {
   width: 100%;
   height: 70px;
-  background-color: $primary;
   .nav-pills {
+    margin: 0 auto;
     .nav-item {
       .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 100px;
+        margin: 15px;
         color: $white;
+        font-size: 28px;
+        text-align: center;
+        background-color: $primary;
       }
     }
   }

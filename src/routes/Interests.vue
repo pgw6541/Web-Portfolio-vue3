@@ -21,7 +21,8 @@ section {
   text-align: center;
 }
 .section1 {
-  padding-top: 85px;
+  // padding-top: 85px;
+  padding: 85px;
 }
 .section2 {
   color: $white;
