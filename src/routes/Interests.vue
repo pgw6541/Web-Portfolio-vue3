@@ -1,5 +1,5 @@
 <template>
-  <section class="section1 interests">
+  <section class="section1">
     <InterHeader />
   </section>
   <section class="section2">
