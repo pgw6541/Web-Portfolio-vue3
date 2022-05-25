@@ -1,8 +1,17 @@
 <template>
   <div class="container">
-    Contact..!!
+    <Emailsend />
   </div>
 </template>
+
+<script>
+import Emailsend from "~/components/Emailsend"
+export default {
+  components: {
+    Emailsend
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .container {

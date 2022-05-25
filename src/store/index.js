@@ -3,6 +3,6 @@ import about from './about'
 
 export default createStore({
   modules: {
-    about,
+    about
   }
 })
