@@ -140,7 +140,7 @@ export default {
       .bubble_box {
         width: 250px;
         height: 100px;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
         padding: 8px;
         background-color: #fff;
         border-radius: 5px;
