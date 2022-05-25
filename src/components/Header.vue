@@ -44,11 +44,7 @@ export default {
         {
           name: 'Products',
           href: '/products'
-        },
-        {
-          name: 'Interests',
-          href: '/interests'
-        },
+        }
       ],
       showNavbar: true,
       lastScrollPosition: 0

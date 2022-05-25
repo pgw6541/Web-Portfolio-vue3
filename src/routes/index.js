@@ -1,10 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Products from './Products'
 import Home from './Home'
-import Interests from './Interests'
-import Intermovie from './Inter_movie'
-import Intergame from './Inter_game'
-import Interhardware from './Inter_hardware'
 
 export default createRouter({
   // Hash모드, History모드로 사용 가능
@@ -25,25 +21,6 @@ export default createRouter({
       path: '/products',
       component: Products,
     },
-    {
-      // 취미
-      path: '/Interests',
-      component: Interests,
-      children: [
-        {
-          path: '',
-          component: Intermovie
-        },
-        {
-          path: 'game',
-          component: Intergame
-        },
-        {
-          path: 'hardware',
-          component: Interhardware
-        },
-      ]
-    }
   ]
 })
 
