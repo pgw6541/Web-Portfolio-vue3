@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Products from './Products'
 import Home from './Home'
+import Contact from './Contact'
 
 export default createRouter({
   // Hash모드, History모드로 사용 가능
@@ -21,6 +22,10 @@ export default createRouter({
       path: '/products',
       component: Products,
     },
+    {
+      path: '/contact',
+      component: Contact
+    }
   ]
 })
 

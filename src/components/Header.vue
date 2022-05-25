@@ -44,7 +44,11 @@ export default {
         {
           name: 'Products',
           href: '/products'
-        }
+        },
+        {
+          name: 'Contact',
+          href: '/contact'
+        },
       ],
       showNavbar: true,
       lastScrollPosition: 0
