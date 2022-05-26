@@ -2,19 +2,66 @@
   <form
     ref="form"
     @submit.prevent="sendEmail">
-    <label>Name</label>
-    <input
-      type="text"
-      name="user_name" />
-    <label>Email</label>
-    <input
-      type="email"
-      name="user_email" />
-    <label>Message</label>
-    <textarea name="message"></textarea>
-    <input
+    <!-- 성함 -->
+    <div class="row align-items-center box">
+      <div class="col-sm-2">
+        <label
+          class="col-form-label">기업명</label>
+      </div>
+      <div class="col-sm-10">
+        <input
+          type="text"
+          name="user_name" 
+          maxlength="5"
+          class="form-control" />
+      </div>
+    </div>
+
+    <!-- 전화번호 -->
+    <div class="row align-items-center box">
+      <div class="col-sm-2">
+        <label
+          class="col-form-label">Phone</label>
+      </div>
+      <div class="col-sm-10">
+        <input
+          type="tel"
+          name="user_phone"
+          maxlength="13"
+          minlength="11"
+          class="form-control" />
+      </div>
+    </div>
+    <div class="row align-items-center box">
+      <!-- 이메일 -->
+      <div class="col-sm-2">
+        <label
+          class="col-form-label">Email</label>
+      </div>
+      <div class="col-sm-10">
+        <input
+          type="email"
+          name="user_email"
+          class="form-control" />
+      </div>
+    </div>
+    <div class="row align-items-center box">
+      <!-- 내용 -->
+      <div class="col-sm-2">
+        <label
+          class="col-form-label">Message</label>
+      </div>
+      <div class="col-sm-10">
+        <textarea
+          name="message"
+          class="form-control"></textarea>
+      </div>
+    </div>
+    <button
       type="submit"
-      value="Send" />
+      class="btn btn-primary">
+      보내기
+    </button>
   </form>
 </template>
 
@@ -38,5 +85,11 @@ export default {
 <style lang="scss" scoped>
 form {
   color: $white;
+  .box {
+    margin-top: 40px;
+  }
+  .btn {
+    margin-top: 40px;
+  }
 }
 </style>
