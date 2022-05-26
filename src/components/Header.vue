@@ -123,9 +123,9 @@ header {
       .nav-link {
         font-size: 18px;
         font-weight: 500;
-        color: $gray-500;
+        color: $gray-400;
         text-align: center;
-        @include magic-border(1px, $primary, .1s, 1);
+        // @include magic-border(1px, $primary, .1s, 1);
         &:hover {
           color: $white;
         }
@@ -134,7 +134,7 @@ header {
           box-sizing: border-box;
           background-color: $primary;
           border-radius: 0;
-          @include magic-border(0px, $primary, .1s, 1);
+          // @include magic-border(0px, $primary, .1s, 1);
         }
       }
     }
