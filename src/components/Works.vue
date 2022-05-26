@@ -50,6 +50,9 @@ export default {
 <style lang="scss" scoped>
 //Works img
 $imgSize: 300px;
+$xxl-imgSize: 250px;
+$xl-imgSize: 200px;
+$sm-imgSize: 230px;
 
 .section {
   display: flex;
@@ -87,6 +90,62 @@ $imgSize: 300px;
       height: $imgSize;
       background-color: $gray-900;
       border-radius: 10px;
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    .workBox {
+      img {
+        width: $xxl-imgSize * 16/9;
+        height: $xxl-imgSize;
+      }
+    }
+    .skeletons {
+      .image {
+        width: $xxl-imgSize * 16/9;
+        height: $xxl-imgSize;
+      }
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    .workBox {
+      img {
+        width: $xl-imgSize * 16/9;
+        height: $xl-imgSize;
+      }
+    }
+    .skeletons {
+      .image {
+        width: $xl-imgSize * 16/9;
+        height: $xl-imgSize;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .workBox {
+      img {
+        width: $imgSize * 16/9;
+        height: $imgSize;
+      }
+    }
+    .skeletons {
+      .image {
+        width: $imgSize * 16/9;
+        height: $imgSize;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .workBox {
+      img {
+        width: $sm-imgSize * 16/9;
+        height: $sm-imgSize;
+      }
+    }
+    .skeletons {
+      .image {
+        width: $sm-imgSize * 16/9;
+        height: $sm-imgSize;
+      }
     }
   }
 }

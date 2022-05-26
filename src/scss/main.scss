@@ -8,11 +8,11 @@ $personal: #171626;
 $inner: 1180px;
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px 
+  sm: 540px, // >576px
+  md: 720px, // >768px
+  lg: 960px, // >992px
+  xl: 1140px, // >1200px
+  xxl: 1320px  // >1400px
 );
 
 // bootstrap 
