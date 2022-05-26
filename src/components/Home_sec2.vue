@@ -49,47 +49,48 @@
 </template>
 
 <style lang="scss" scoped>
-  .container {
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  .article1 {
+    width: 70%;
+    .textBox {
+      font-size: 15px;
+      letter-spacing: 0.1rem;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      align-items: center;
-      .article1 {
-        width: 60%;
-        .textBox {
-          font-size: 15px;
-          letter-spacing: 0.1rem;
-          padding: 5%;
-          display: flex;
-          justify-content: space-between;
-          ul.list {
-            li.title {
-              h1 {
-                font-weight: bold;
-                padding-bottom: 10px;
-                margin-bottom: 20px;
-                border-bottom: 1px dotted $gray-700;
-              }
-            }
-            li.license {
-              margin-top: 30px;
-            }
-            li {
-              margin: 0 0 10px;
-              span.after {
-                color: $gray-600;
-              }
-            }
+      justify-content: space-around;
+      ul.list {
+        padding-left: 0;
+        li.title {
+          h1 {
+            font-weight: bold;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px dotted $gray-700;
           }
         }
-      }
-      .article2 {
-        width: 25%;
-        text-align: center;
-        img.headShot {
-          width: 100%;
-          border-radius: 50px;
+        li.license {
+          margin-top: 30px;
         }
+        li {
+          margin: 0 0 10px;
+          span.after {
+            color: $gray-600;
+          }
+        }
+
       }
     }
+  }
+  .article2 {
+    width: 25%;
+    text-align: center;
+    img.headShot {
+      width: 100%;
+      border-radius: 50px;
+    }
+  }
+}
 </style>
