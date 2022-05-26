@@ -125,9 +125,8 @@ export default {
       position: relative;
       img {
         transition: .3s;
-        // filter: invert(100%);
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1.15);
         }
       }
       img.html5 {filter: invert(45%) sepia(50%) saturate(5613%) hue-rotate(348deg) brightness(93%) contrast(90%); &:hover + span.html5 {opacity: 1;}}
