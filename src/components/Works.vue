@@ -52,7 +52,7 @@ export default {
 $imgSize: 300px;
 $xxl-imgSize: 250px;
 $xl-imgSize: 200px;
-$sm-imgSize: 150px;
+$sm-imgSize: 180px;
 
 .section {
   display: flex;
