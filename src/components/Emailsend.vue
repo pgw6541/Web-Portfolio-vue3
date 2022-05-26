@@ -21,7 +21,7 @@
     <div class="row align-items-center box">
       <div class="col-sm-2">
         <label
-          class="col-form-label">Phone</label>
+          class="col-form-label">연락처</label>
       </div>
       <div class="col-sm-10">
         <input
@@ -36,7 +36,7 @@
       <!-- 이메일 -->
       <div class="col-sm-2">
         <label
-          class="col-form-label">Email</label>
+          class="col-form-label">이메일</label>
       </div>
       <div class="col-sm-10">
         <input
@@ -49,7 +49,7 @@
       <!-- 내용 -->
       <div class="col-sm-2">
         <label
-          class="col-form-label">Message</label>
+          class="col-form-label">메시지</label>
       </div>
       <div class="col-sm-10">
         <textarea
