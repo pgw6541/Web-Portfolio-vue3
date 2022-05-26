@@ -8,7 +8,7 @@
         <label
           class="col-form-label">기업명</label>
       </div>
-      <div class="col-sm-10">
+      <div class="col-sm-9">
         <input
           type="text"
           name="user_name" 
@@ -23,7 +23,7 @@
         <label
           class="col-form-label">연락처</label>
       </div>
-      <div class="col-sm-10">
+      <div class="col-sm-9">
         <input
           type="tel"
           name="user_phone"
@@ -38,7 +38,7 @@
         <label
           class="col-form-label">이메일</label>
       </div>
-      <div class="col-sm-10">
+      <div class="col-sm-9">
         <input
           type="email"
           name="user_email"
@@ -51,9 +51,10 @@
         <label
           class="col-form-label">메시지</label>
       </div>
-      <div class="col-sm-10">
+      <div class="col-sm-9">
         <textarea
           name="message"
+          style="height: 100px"
           class="form-control"></textarea>
       </div>
     </div>
@@ -84,7 +85,9 @@ export default {
 
 <style lang="scss" scoped>
 form {
+  width: 60%;
   color: $white;
+  margin: 0 auto;
   .box {
     margin-top: 40px;
   }
