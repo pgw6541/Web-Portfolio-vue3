@@ -48,43 +48,46 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    .workBox {
-      text-decoration: none;
-      margin: 50px 20px 0 20px;
-      img {
-        width: $imgSize * 16/9;
-        height: $imgSize;
+//Works img
+$imgSize: 300px;
 
-        border: 2px solid $gray-200;
-        border-radius: 10px;
-      }
-      .textBox {
-        text-align: center;
-        h1 {
-          color: $gray-500;
-          font-size: 15px;
-          font-weight: 700;
-          margin-top: 15px;
-          box-sizing: border-box;
-        }
-      }
+.section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .workBox {
+    text-decoration: none;
+    margin: 50px 20px 0 20px;
+    img {
+      width: $imgSize * 16/9;
+      height: $imgSize;
+
+      border: 2px solid $gray-200;
+      border-radius: 10px;
     }
-    // Skelton
-    .skeletons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 50px 20px 50px 20px;
-      .image {
-        width: $imgSize * 16/9;
-        height: $imgSize;
-        background-color: $gray-900;
-        border-radius: 10px;
+    .textBox {
+      text-align: center;
+      h1 {
+        color: $gray-500;
+        font-size: 15px;
+        font-weight: 700;
+        margin-top: 15px;
+        box-sizing: border-box;
       }
     }
   }
+  // Skelton
+  .skeletons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px 20px 50px 20px;
+    .image {
+      width: $imgSize * 16/9;
+      height: $imgSize;
+      background-color: $gray-900;
+      border-radius: 10px;
+    }
+  }
+}
 </style>
