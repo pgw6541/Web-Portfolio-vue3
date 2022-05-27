@@ -164,5 +164,17 @@ export default {
       }
     }
   }
+  @include media-breakpoint-down(xl) {
+
+  }
+  @include media-breakpoint-down(lg) {
+
+  }
+  @include media-breakpoint-down(md) {
+
+  }
+  @include media-breakpoint-down(sm) {
+
+  }
 }
 </style>
