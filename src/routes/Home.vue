@@ -54,7 +54,7 @@ section {
 .section2 {
   color: $white;
   width: 100%;
-  height: 90vh;
+  height: 100%;
   background-color: transparent;
   background: url('~/assets/background_img2.jpg') no-repeat center/cover,rgba(0,0,0,.85);
   background-blend-mode: multiply;
@@ -69,13 +69,19 @@ section {
 .section4 {
   color: $white;
   width: 100%;
-  height: 90vh;
+  height: 100%;
   background: url('~/assets/section3_img.jpg') no-repeat center/cover,rgba(0,0,0,.8);
   background-blend-mode: multiply;
   display: flex;
   align-items: center;
   border-top-right-radius: 15%;
   border-bottom-left-radius: 15%;
+}
+@include media-breakpoint-down(sm) {
+  .section4 {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 </style>
