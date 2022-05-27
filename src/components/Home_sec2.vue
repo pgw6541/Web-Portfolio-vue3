@@ -9,8 +9,8 @@
               About
             </h1>
           </li>
-          <li><span class="after">name</span> : 박 건우</li>
-          <li><span class="after">age</span> : 27세(96년생)</li>
+          <li><span class="after">Name</span> : 박 건우</li>
+          <li><span class="after">Age</span> : 27세(96년생)</li>
         </ul>
         <ul class="list career">
           <li class="title">

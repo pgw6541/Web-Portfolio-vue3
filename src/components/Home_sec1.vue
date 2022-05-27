@@ -97,11 +97,13 @@ export default {
     }
     span.title {
       font-family: "Dancing Script", serif;
+      // font-family: 'S-CoreDream-3Light';
       font-weight: bold;
-      font-size: 96px;
+      font-size: 72px;
     }
     span.typing {
-      font-family: "Noto Sans KR", serif;
+      // font-family: "Noto Sans KR", serif;
+      font-family: 'S-CoreDream-3Light';
       font-weight: normal;
       font-size: 46px;
       &::after {
@@ -166,7 +168,7 @@ export default {
   @include media-breakpoint-down(lg) {
     .para_text {
       span.title {
-        font-size: 64px;
+        font-size: 56px;
       }
       span.typing {
         font-size: 32px;
@@ -185,9 +187,9 @@ export default {
         font-size: 32px;
       }
       span.typing {
-        font-size: 18px;
+        font-size: 24px;
         &::after {
-          font-size: 20px;
+          font-size: 24px;
         }
       }
     }
