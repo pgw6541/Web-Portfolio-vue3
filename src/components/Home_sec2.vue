@@ -4,7 +4,7 @@
     <article class="article1">
       <div class="textBox">
         <ul class="list about">
-          <li class="title">
+          <li class="title titleAbout">
             <h1>
               About
             </h1>
@@ -51,17 +51,17 @@
 <style lang="scss" scoped>
 .container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   .article1 {
     width: 70%;
     .textBox {
       font-size: 15px;
-      letter-spacing: 0.1rem;
+      letter-spacing: 1px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-around;
-      ul.list {
+      ul {
         padding-left: 0;
         li.title {
           h1 {
@@ -90,6 +90,33 @@
     img.headShot {
       width: 100%;
       border-radius: 50px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .article1 {
+      width: 100%;
+    }
+    .article2 {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .textBox {
+      ul {
+        width: 100%;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .textBox {
+      ul {
+        width: 80%;
+      }
+      ul.career {
+        li {
+          margin: 0 0 30px;
+        }
+      }
     }
   }
 }
