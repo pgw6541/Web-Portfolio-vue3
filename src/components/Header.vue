@@ -115,12 +115,12 @@ header {
   }
   .nav {
     .nav-item {
-      width: 100px;
       margin-left: 20px;
       &:first-child {
         margin-left: 0;
       }
       .nav-link {
+        display: inline;
         font-size: 18px;
         font-weight: 500;
         color: $gray-400;
@@ -133,7 +133,7 @@ header {
           color: $white;
           box-sizing: border-box;
           background-color: $primary;
-          border-radius: 0;
+          border-radius: 5px;
           // @include magic-border(0px, $primary, .1s, 1);
         }
       }
@@ -148,6 +148,42 @@ header {
         transition: .2s;
         &:hover {
           filter: invert(100%);
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    header {
+      
+    }
+    .logo {
+      display: none;
+    }
+    .nav {
+      width: 100%;
+      .nav-item {
+        margin-left: 5px;
+        &:first-child {
+          margin-left: 10px;
+        }
+        .nav-link {
+          padding: 0.5rem 0.75rem;
+          font-size: 16px;
+          font-weight: 500;
+          color: $gray-400;
+          text-align: center;
+          // @include magic-border(1px, $primary, .1s, 1);
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+    .gitHubLogo {
+      a {
+        img {
+          width: 32px;
+          margin-right: 10px;
         }
       }
     }
