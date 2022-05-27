@@ -4,7 +4,7 @@
     <div class="para_img"></div>
     <div class="para_text">
       <p>
-        <span class="text">Welcome to my portfolio</span>
+        <span class="title">Welcome to my portfolio</span>
         <br />
         <span class="typing"></span>
       </p>
@@ -95,7 +95,7 @@ export default {
     p {
       line-height: 2;
     }
-    span.text {
+    span.title {
       font-family: "Dancing Script", serif;
       font-weight: bold;
       font-size: 96px;
@@ -107,8 +107,7 @@ export default {
       &::after {
         content: "|";
         animation: blink 1s step-end infinite;
-        font-size: 60px;
-        line-height: 1.25;
+        font-size: 52px;
         font-weight: normal;
       }
     }
@@ -164,17 +163,35 @@ export default {
       }
     }
   }
-  @include media-breakpoint-down(xl) {
-
-  }
   @include media-breakpoint-down(lg) {
-
-  }
-  @include media-breakpoint-down(md) {
-
+    .para_text {
+      span.title {
+        font-size: 64px;
+      }
+      span.typing {
+        font-size: 32px;
+        &::after {
+          font-size: 36px;
+        }
+      }
+    }
   }
   @include media-breakpoint-down(sm) {
-
+    .para_text {
+      span {
+        line-height: 56px;
+      }
+      span.title {
+        font-size: 32px;
+      }
+      span.typing {
+        font-size: 18px;
+        &::after {
+          font-size: 20px;
+        }
+      }
+    }
+    
   }
 }
 </style>
