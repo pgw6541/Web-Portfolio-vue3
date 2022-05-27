@@ -118,23 +118,30 @@ export default {
       }
     }
   }
+
   article {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     .tech_box {
+      // width: 72px;
+      width: 16.6667%;
+      text-align: center;
       position: relative;
       img {
+        width: 72px;
+        margin: 0 auto;
         transition: .3s;
         &:hover {
           transform: scale(1.15);
         }
       }
-      img.html5 {filter: invert(45%) sepia(50%) saturate(5613%) hue-rotate(348deg) brightness(93%) contrast(90%); &:hover + span.html5 {opacity: 1;}}
-      img.css3 {filter: invert(38%) sepia(31%) saturate(1816%) hue-rotate(168deg) brightness(92%) contrast(94%); &:hover + span.css3 {opacity: 1;}}
-      img.sass {filter: invert(56%) sepia(45%) saturate(661%) hue-rotate(283deg) brightness(85%) contrast(86%); &:hover + span.sass {opacity: 1;}}
-      img.javascript {filter: invert(96%) sepia(48%) saturate(6450%) hue-rotate(339deg) brightness(101%) contrast(94%); &:hover + span.javascript {opacity: 1;}}
-      img.vue {filter: invert(68%) sepia(31%) saturate(645%) hue-rotate(101deg) brightness(91%) contrast(90%); &:hover + span.vue {opacity: 1;}}
-      img.webpack {filter: invert(95%) sepia(13%) saturate(6639%) hue-rotate(172deg) brightness(100%) contrast(98%); &:hover + span.webpack {opacity: 1;}}
+      img.html5 {filter: invert(45%) sepia(50%) saturate(5613%) hue-rotate(348deg) brightness(93%) contrast(90%); &:hover + span.html5 {opacity: 1; display: block;}}
+      img.css3 {filter: invert(38%) sepia(31%) saturate(1816%) hue-rotate(168deg) brightness(92%) contrast(94%); &:hover + span.css3 {opacity: 1; display: block;}}
+      img.sass {filter: invert(56%) sepia(45%) saturate(661%) hue-rotate(283deg) brightness(85%) contrast(86%); &:hover + span.sass {opacity: 1; display: block;}}
+      img.javascript {filter: invert(96%) sepia(48%) saturate(6450%) hue-rotate(339deg) brightness(101%) contrast(94%); &:hover + span.javascript {opacity: 1; display: block;}}
+      img.vue {filter: invert(68%) sepia(31%) saturate(645%) hue-rotate(101deg) brightness(91%) contrast(90%); &:hover + span.vue {opacity: 1; display: block;}}
+      img.webpack {filter: invert(95%) sepia(13%) saturate(6639%) hue-rotate(172deg) brightness(100%) contrast(98%); &:hover + span.webpack {opacity: 1; display: block;}}
 
       .bubble_box {
         width: 250px;
@@ -148,6 +155,7 @@ export default {
         right: 50%;
         transform: translateX(50%);
         transition: opacity .3s;
+        display: none;
         opacity: 0;
         h1 {
           color: $gray-700;
@@ -171,6 +179,43 @@ export default {
           border-bottom: 0;
           margin-left: -10px;
           margin-bottom: -10px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    article {
+      justify-content: space-evenly;
+      .tech_box {
+        .bubble_box {
+          width: 200px;
+          height: 110px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    article {
+      justify-content: space-evenly;
+      .tech_box {
+        width: 33.333%;
+        img {
+          margin-bottom: 60px;
+        }
+        .bubble_box {
+          width: 170px;
+          height: 120px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    article {
+      .tech_box {
+        width: 50%;
+        text-align: center;
+        img {
+          margin: 0 auto 40px;
         }
       }
     }
