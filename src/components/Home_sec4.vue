@@ -11,13 +11,14 @@
         Why? front-end developer
       </h1>
       <div class="textBox">
-        <p class="text txt1">
-          컴퓨터정보과에 진학하며 C언어, Unity, JAVA, Android Studio, Photoshop, Illustrator 등<br />
-          다양한 개발언어와 디자인툴을 접해볼 기회가 되었습니다.<br />
+        <p>
+          컴퓨터정보과에 진학하며 C언어, Unity, JAVA, Android Studio, Photoshop, Illustrator 등
+          다양한 개발언어와 디자인툴을 접해볼 기회가 되었습니다.
           <br />
-          당시 진로에 대한 방향성을 찾고 있던 와중에 서버 관련 언어들보단 가시적인 결과물들을 만들 수 있는 것에<br />
-          웹 UI, UX에 흥미가 생겨. 졸업 후에 기본기를 배우고자 이젠컴퓨터아카데미 웹 퍼블리셔 과정을<br />
-          수료한 뒤 웹 개발자라는 직업이 무엇인지, 어떤 것이 있고 무엇을 사용하는지 알아가면서 항상 사용자에<br />
+          <br />
+          당시 진로에 대한 방향성을 찾고 있던 와중에 서버 관련 언어들보단 가시적인 결과물들을 만들 수 있는 것에
+          웹 UI, UX에 흥미가 생겨. 졸업 후에 기본기를 배우고자 이젠컴퓨터아카데미 웹 퍼블리셔 과정을
+          수료한 뒤 웹 개발자라는 직업이 무엇인지, 어떤 것이 있고 무엇을 사용하는지 알아가면서 항상 사용자에
           경험을 바탕으로 편리함을 제공해주는 웹 클라이언트 서비스 프론트엔드로 꿈을 키워 나가고 있습니다.
         </p>
       </div>
@@ -54,8 +55,38 @@
       margin-top: 30px;
       letter-spacing: 0.1rem;
       }
-    .txt1 {
+    p {
       line-height: 1.6;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .article1 {
+      display: none;
+    }
+    .article2 {
+      width: 100%;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .article2 {
+      .title {
+        font-size: 32px;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .article2 {
+      .title {
+        text-align: center;
+      }
+    }
+    .textBox {
+      font-size: 14px;
+      letter-spacing: 0;
+      padding: 0 16px;
+    }
+    p {
+      line-height: 1.25;
     }
   }
 }
