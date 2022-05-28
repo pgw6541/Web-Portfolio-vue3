@@ -85,7 +85,7 @@ export default {
 
 <style lang="scss" scoped>
 form {
-  width: 60%;
+  width: 80%;
   color: $white;
   margin: 0 auto;
   .box {
@@ -93,6 +93,12 @@ form {
   }
   .btn {
     margin-top: 40px;
+  }
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
+  @include media-breakpoint-down(md) {
+    width: 90%;
   }
 }
 </style>
