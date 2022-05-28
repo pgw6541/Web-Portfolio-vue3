@@ -102,12 +102,6 @@
       padding: 0 16px;
       p {
         line-height: 1.25;
-      }
-    }
-  }
-  @include media-breakpoint-down(xs) {
-    .textBox {
-      p {
         .br2 {display: none}
       }
     }

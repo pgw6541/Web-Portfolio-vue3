@@ -141,10 +141,6 @@
             margin: 0 0 18px;
           }
         }
-        .list {
-          li {   
-          }
-        }
       }
       ul.career {
         .list {
@@ -152,20 +148,19 @@
             height: 10%;
           }
         }
-        
       }
     }
   }
-  @include media-breakpoint-down(xxs) {
-    .textBox {
-      ul.career {
-        .list {
-          li {
-            margin: 0 0 36px;
-          }
-        }
-      }
-    }
-  }
+  // @include media-breakpoint-down(xxs) {
+  //   .textBox {
+  //     ul.career {
+  //       .list {
+  //         li {
+  //           margin: 0 0 36px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }
 </style>
