@@ -22,7 +22,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container {
-  height: 100vh;
+  height: 100%;
   color: $white;
   text-align: center;
   padding-top: 160px;
