@@ -74,14 +74,6 @@ section {
   background-blend-mode: multiply;
   display: flex;
   align-items: center;
-  border-top-right-radius: 15%;
-  border-bottom-left-radius: 15%;
-}
-@include media-breakpoint-down(sm) {
-  .section4 {
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
 }
 
 </style>
