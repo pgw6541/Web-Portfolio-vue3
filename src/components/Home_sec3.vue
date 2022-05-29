@@ -145,7 +145,6 @@ export default {
 
       .bubble_box {
         width: 250px;
-        height: 100px;
         margin-bottom: 24px;
         padding: 8px;
         background-color: #fff;
@@ -189,7 +188,6 @@ export default {
       .tech_box {
         .bubble_box {
           width: 200px;
-          height: 110px;
         }
       }
     }
@@ -204,7 +202,6 @@ export default {
         }
         .bubble_box {
           width: 170px;
-          height: 120px;
         }
       }
     }
