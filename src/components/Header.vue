@@ -90,6 +90,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 
   position: fixed;
   transform: translate3d(0, 0, 0);
@@ -153,18 +154,18 @@ header {
     }
   }
   @include media-breakpoint-down(sm) {
-    header {
-      
-    }
+    flex-direction: row-reverse;
     .logo {
       display: none;
     }
     .nav {
-      width: 100%;
       .nav-item {
         margin-left: 5px;
         &:first-child {
-          margin-left: 10px;
+          margin-left: 5px;
+        }
+        &:last-child {
+          margin-right: 5px;
         }
         .nav-link {
           padding: 0.5rem 0.75rem;
@@ -183,7 +184,8 @@ header {
       a {
         img {
           width: 32px;
-          margin-right: 10px;
+          margin-right: 0;
+          margin-left: 10px;
         }
       }
     }
