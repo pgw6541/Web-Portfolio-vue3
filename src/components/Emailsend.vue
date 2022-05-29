@@ -11,8 +11,9 @@
       <div class="col-sm-9">
         <input
           type="text"
+          placeholder="Enterprise"
           name="user_name" 
-          maxlength="5"
+          maxlength="20"
           class="form-control" />
       </div>
     </div>
@@ -29,6 +30,7 @@
           name="user_phone"
           maxlength="13"
           minlength="11"
+          placeholder="- 또는 공백 없이 작성 부탁드립니다."
           class="form-control" />
       </div>
     </div>
@@ -42,6 +44,7 @@
         <input
           type="email"
           name="user_email"
+          placeholder="abc123@example.com"
           class="form-control" />
       </div>
     </div>
@@ -55,6 +58,7 @@
         <textarea
           name="message"
           style="height: 100px"
+          placeholder="Message"
           class="form-control"></textarea>
       </div>
     </div>
@@ -99,6 +103,9 @@ form {
   }
   @include media-breakpoint-down(md) {
     width: 90%;
+    ::placeholder {
+      font-size: 0.75rem;
+    }
   }
 }
 </style>
