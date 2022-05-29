@@ -57,10 +57,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// border
 $ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 $color-grey: #A6AFC0;
 $color-off-white: $gray-700;
-//Works img
+// img size Responsive
 $imgSize: 300px;
 $xxl-imgSize: 250px;
 $xl-imgSize: 200px;
@@ -78,7 +79,6 @@ $sm-imgSize: 180px;
       img {
         width: $imgSize * 16/9;
         height: $imgSize;
-        // border-radius: 10px;
       }
       &::after {
         content: '';
@@ -87,9 +87,10 @@ $sm-imgSize: 180px;
         position: absolute;
         top: 0;
         left: 0;
-        background-color: $black;
+        background-color: rgba(0,0,0);
         opacity: 0;
         transition: .3s;
+        
       }
       .lines {
         background:
@@ -129,14 +130,19 @@ $sm-imgSize: 180px;
         margin: -10px;
       }
       .info {
+        width: 100%;
+        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
         z-index: 2;
         opacity: 0;
         transition: .3s;
+        opacity: 0;
+        text-align: center;
         p {
           color: $white;
+          margin: 20% 0 5%;
         }
         a {
           padding: 10px 25px;
@@ -163,7 +169,7 @@ $sm-imgSize: 180px;
     .textBox {
       text-align: center;
       h1 {
-        color: $gray-500;
+        color: $gray-600;
         font-size: 15px;
         font-weight: 700;
         margin-top: 20px;
