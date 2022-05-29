@@ -79,7 +79,18 @@ $sm-imgSize: 180px;
         width: $imgSize * 16/9;
         height: $imgSize;
         // border-radius: 10px;
-        }
+      }
+      &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $black;
+        opacity: 0;
+        transition: .3s;
+      }
       .lines {
         background:
           linear-gradient(to bottom, $color-off-white 2px, transparent 2px) 0 0, // TOP LEFT TO TOP RIGHT
@@ -118,22 +129,26 @@ $sm-imgSize: 180px;
         margin: -10px;
       }
       .info {
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0);
         position: absolute;
         top: 0;
         left: 0;
-        transition: .3s;
+        z-index: 2;
         opacity: 0;
+        transition: .3s;
         p {
-
+          color: $white;
         }
         a {
-
+          padding: 10px 25px;
+          color: $white;
+          text-decoration: none;
+          background-color: $primary;
         }
       }
       &:hover {
+        &::after {
+          opacity: .85;
+        }
         .lines {
           background-size: 100% 100%;
         }
@@ -141,8 +156,7 @@ $sm-imgSize: 180px;
           background-size: 14px 14px;
         }
         .info {
-          background-color: rgba(0,0,0);
-          opacity: .8;
+          opacity: 1;
         }
       }
     }
