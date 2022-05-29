@@ -42,7 +42,7 @@ export default {
           name: 'OMDbApi 영화 검색 사이트',
           href: 'https://movie-search-app-vue3.netlify.app',
           image: 'https://raw.githubusercontent.com/pgw6541/image_source/master/Web-Portfolio/omdb.png',
-          info: '검색창에 영화 검색하면 영화나옴'
+          info: 'OMDbApi를 활용한 영화 검색(영문) 사이트'
         },
         {
           name: '2017 Starbucks Home',
