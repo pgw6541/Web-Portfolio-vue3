@@ -66,6 +66,7 @@ $imgSize: 300px;
 $xxl-imgSize: 250px;
 $xl-imgSize: 200px;
 $sm-imgSize: 180px;
+$xxs-imgSize: 150px;
 
 .section {
   display: flex;
@@ -149,7 +150,6 @@ $sm-imgSize: 180px;
           color: $white;
           text-decoration: none;
           background-color: $primary;
-          display: none;
         }
       }
       &:hover {
@@ -165,7 +165,6 @@ $sm-imgSize: 180px;
         .info {
           opacity: 1;
           a {
-            display: inline;
           }
         }
       }
@@ -249,12 +248,50 @@ $sm-imgSize: 180px;
           width: $sm-imgSize * 16/9;
           height: $sm-imgSize;
         }
+        .info {
+          p {
+            margin: 20% 0 13%;
+          }
+          a {
+            font-size: 12px;
+            padding: 7px 15px;
+          }
+        }
       }
     }
     .skeletons {
       .image {
         width: $sm-imgSize * 16/9;
         height: $sm-imgSize;
+      }
+    }
+  }
+}
+// xxs
+@media only screen and (max-width: 350px) {
+  .section {
+    .workBox {
+      .img {
+        img {
+          width: $xxs-imgSize * 16/9;
+          height: $xxs-imgSize;
+        }
+        .info {
+          p {
+            margin: 15% 0 10%;
+
+          }
+          a {
+            font-size: 12px;
+            padding: 7px 15px;
+          }
+        }
+      }
+    }
+    .skeletons {
+      .image {
+        width: $xxs-imgSize * 16/9;
+        height: $xxs-imgSize;
       }
     }
   }
