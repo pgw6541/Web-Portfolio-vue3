@@ -149,6 +149,7 @@ $sm-imgSize: 180px;
           color: $white;
           text-decoration: none;
           background-color: $primary;
+          display: none;
         }
       }
       &:hover {
@@ -163,6 +164,9 @@ $sm-imgSize: 180px;
         }
         .info {
           opacity: 1;
+          a {
+            display: inline;
+          }
         }
       }
     }
