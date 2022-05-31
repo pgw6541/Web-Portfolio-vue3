@@ -67,6 +67,20 @@
       class="btn btn-primary">
       보내기
     </button>
+    <div class="sendNext">
+      <!-- Result -->
+      <p
+        class="result"
+        v-show="resVisible">
+        이메일이 성공적으로 전송 되었습니다!
+      </p>
+      <!-- error -->
+      <p
+        class="error"
+        v-show="errVisible">
+        이메일이 오류로 인해 전송되지 못했습니다.
+      </p>
+    </div>
   </form>
 </template>
 
@@ -74,17 +88,30 @@
 import emailjs from '@emailjs/browser';
 
 export default {
+  data() {
+    return {
+      resVisible: true,
+      errVisible: false
+    }
+  },
   methods: {
     sendEmail() {
       emailjs.sendForm('service_83', 'template_7jofed9', this.$refs.form, 'HIhQbl0bkk_dF9Lsg')
         .then((result) => {
             console.log('SUCCESS!', result.text);
+            this.resVisible = true
+            this.errVisible = false
         }, (error) => {
-            console.log('FAILED...', error.text);
+          console.log('FAILED...', error.text);
+          this.errVisible = true
+          this.resVisible = false
         });
     }
   }
 }
+
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -105,6 +132,13 @@ form {
     width: 90%;
     ::placeholder {
       font-size: 0.75rem;
+    }
+  }
+  .sendNext {
+    margin-top: 20px;
+    p {
+      font-size: 14px;
+      font-weight: bold;
     }
   }
 }
