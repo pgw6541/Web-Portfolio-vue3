@@ -90,7 +90,7 @@ import emailjs from '@emailjs/browser';
 export default {
   data() {
     return {
-      resVisible: true,
+      resVisible: false,
       errVisible: false
     }
   },
