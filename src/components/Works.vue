@@ -42,7 +42,7 @@ export default {
           name: 'OMDbApi 영화 검색 사이트',
           href: 'https://movie-search-app-vue3.netlify.app',
           image: 'https://raw.githubusercontent.com/pgw6541/image_source/master/Web-Portfolio/omdb.png',
-          info: 'OMDbApi를 활용한 영화 검색(영문) 사이트 (강의)'
+          info: 'OMDbApi를 활용한 영화 검색(영문) 사이트'
         },
         {
           name: 'Todolist',
@@ -54,7 +54,7 @@ export default {
           name: '2017 Starbucks Home',
           href: 'https://starbucks-gunw.netlify.app',
           image: 'https://raw.githubusercontent.com/pgw6541/image_source/master/Web-Portfolio/starbucks.png',
-          info: '2017년도 스타벅스 메인페이지 클론코딩 (강의)'
+          info: '2017년도 스타벅스 메인페이지 클론코딩'
         },
       ]
     }
