@@ -45,10 +45,16 @@ export default {
           info: 'OMDbApi를 활용한 영화 검색(영문) 사이트'
         },
         {
+          name: 'OMDbApi 영화 검색 사이트(nuxt.js)',
+          href: 'https://gunw-nuxt-movie-app.herokuapp.com/',
+          image: 'https://raw.githubusercontent.com/pgw6541/source/master/Web-Portfolio/nuxt-movie-app.png',
+          info: 'nuxt.js를 사용한 SSR OMDbApi 영화 검색 사이트'
+        },
+        {
           name: 'Todolist',
           href: 'https://gunw-todolist.netlify.app',
           image: 'https://raw.githubusercontent.com/pgw6541/source/master/Web-Portfolio/works_todolist.png',
-          info: '할 일을 메모하는 기능 구현'
+          info: '할 일을 메모하는 기능을 구현한 Todolist.'
         },
         {
           name: '2017 Starbucks Home',
