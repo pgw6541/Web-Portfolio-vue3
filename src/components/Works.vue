@@ -48,7 +48,7 @@ export default {
           name: 'OMDbApi 영화 검색 사이트(nuxt.js)',
           href: 'https://gunw-nuxt-movie-app.herokuapp.com/',
           image: 'https://raw.githubusercontent.com/pgw6541/source/master/Web-Portfolio/nuxt-movie-app.png',
-          info: 'nuxt.js를 사용한 SSR OMDbApi 영화 검색 사이트'
+          info: 'nuxt.js로 마이그레이션한 SSR OMDbApi 영화 검색 사이트'
         },
         {
           name: 'Todolist',
